@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal homepage of Your Name: research, projects, experience, and contact."
+    />
+    <title>Your Name | Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script>
+      // Prevent "reveal" styles from hiding content when JS is disabled.
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" data-reveal>
+      <div class="container header-inner">
+        <div class="brand">
+          <h1 class="name">Your Name</h1>
+          <p class="subtitle">Researcher / Engineer - Topic A, Topic B, Topic C</p>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#work">Selected work</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="social" aria-label="Social links">
+          <a class="icon-link" href="mailto:you@example.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M4.5 6.75h15A1.5 1.5 0 0 1 21 8.25v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.25v-9a1.5 1.5 0 0 1 1.5-1.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m4.8 8.2 7.2 5.2 7.2-5.2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="icon-link"
+            href="https://github.com/your-handle"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.7 3.4 1.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0C17.9 6 19 6.3 19 6.3c.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9Z"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="icon-link"
+            href="https://scholar.google.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Google Scholar"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M12 3 2 9l10 6 10-6-10-6Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 12.2v4.2c0 .8 2.7 2.6 6 2.6s6-1.8 6-2.6v-4.2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="icon-link"
+            href="https://www.linkedin.com/in/your-handle/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8.1 19H5.3V9.7h2.8V19ZM6.7 8.5a1.6 1.6 0 1 1 0-3.2 1.6 1.6 0 0 1 0 3.2ZM19 19h-2.8v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19H10v-9.3h2.7v1.3h.1c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7V19Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section id="about" class="section" aria-label="About">
+        <div class="container about-grid">
+          <div class="avatar-wrap" data-reveal>
+            <img
+              class="avatar"
+              src="./assets/avatar.svg"
+              alt="Avatar illustration"
+              width="220"
+              height="220"
+              loading="eager"
+            />
+            <p class="avatar-caption">
+              Based in City, Country. Interested in collaboration on research and
+              open-source.
+            </p>
+          </div>
+
+          <div class="about-text" data-reveal>
+            <h2>About</h2>
+            <p>
+              I am a researcher/engineer focused on <strong>your focus area</strong>.
+              My work sits at the intersection of <strong>domain 1</strong> and
+              <strong>domain 2</strong>, with an emphasis on building reliable systems
+              and publishing clear, reproducible results.
+            </p>
+            <p>
+              Currently, I am exploring <strong>topic</strong>, <strong>topic</strong>,
+              and <strong>topic</strong>. I enjoy projects that combine strong
+              engineering with thoughtful evaluation.
+            </p>
+
+            <ul class="chips" aria-label="Interests">
+              <li>ML Systems</li>
+              <li>Robotics</li>
+              <li>Optimization</li>
+              <li>Open-source</li>
+            </ul>
+
+            <div class="cta-row">
+              <a class="button" href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
+              <a class="button button-ghost" href="#" target="_blank" rel="noreferrer"
+                >Google Scholar</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-label="Selected work">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Selected Work</h2>
+            <p class="muted">A few papers, projects, and things I am proud of.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card" data-reveal>
+              <div class="card-top">
+                <h3>Paper / Project Title</h3>
+                <div class="meta">2026 • Conference / Venue</div>
+              </div>
+              <p>
+                One sentence on the problem, one on your approach. Keep this concrete:
+                what did you build, measure, or ship?
+              </p>
+              <ul class="tag-row" aria-label="Tags">
+                <li>Tag</li>
+                <li>Tag</li>
+                <li>Tag</li>
+              </ul>
+              <div class="link-row">
+                <a href="#" target="_blank" rel="noreferrer">Paper</a>
+                <a href="#" target="_blank" rel="noreferrer">Code</a>
+                <a href="#" target="_blank" rel="noreferrer">Demo</a>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card-top">
+                <h3>System / Toolkit Name</h3>
+                <div class="meta">2025 • Open-source</div>
+              </div>
+              <p>
+                Describe the usefulness: what can someone do with it, and what is
+                special about your implementation?
+              </p>
+              <ul class="tag-row" aria-label="Tags">
+                <li>Tooling</li>
+                <li>Infra</li>
+                <li>Docs</li>
+              </ul>
+              <div class="link-row">
+                <a href="#" target="_blank" rel="noreferrer">Repository</a>
+                <a href="#" target="_blank" rel="noreferrer">Docs</a>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card-top">
+                <h3>Applied Project</h3>
+                <div class="meta">2024 • Industry / Lab</div>
+              </div>
+              <p>
+                A short description with impact: metrics, scale, or a clear qualitative
+                outcome.
+              </p>
+              <ul class="tag-row" aria-label="Tags">
+                <li>Applied ML</li>
+                <li>Evaluation</li>
+                <li>Product</li>
+              </ul>
+              <div class="link-row">
+                <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+                <a href="#" target="_blank" rel="noreferrer">Slides</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-label="Experience">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Experience</h2>
+            <p class="muted">Recent roles and responsibilities.</p>
+          </div>
+
+          <ol class="timeline" aria-label="Experience timeline">
+            <li class="timeline-item" data-reveal>
+              <div class="when">2024 - Present</div>
+              <div class="what">
+                <h3>Title • Company / Lab</h3>
+                <p class="meta">Location • Team / Advisor</p>
+                <ul class="bullets">
+                  <li>One high-signal impact bullet (metric if possible).</li>
+                  <li>One technical bullet (what you built or improved).</li>
+                  <li>One collaboration/leadership bullet (optional).</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item" data-reveal>
+              <div class="when">2022 - 2024</div>
+              <div class="what">
+                <h3>Title • Organization</h3>
+                <p class="meta">Location</p>
+                <ul class="bullets">
+                  <li>Impact bullet.</li>
+                  <li>Technical focus bullet.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="education" class="section" aria-label="Education">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Education</h2>
+            <p class="muted">Degrees, programs, and relevant training.</p>
+          </div>
+
+          <ol class="timeline" aria-label="Education timeline">
+            <li class="timeline-item" data-reveal>
+              <div class="when">2020 - 2022</div>
+              <div class="what">
+                <h3>M.S. in Field • University</h3>
+                <p class="meta">Thesis: Title • Advisor: Name</p>
+                <ul class="bullets">
+                  <li>Relevant coursework or focus area (optional).</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item" data-reveal>
+              <div class="when">2016 - 2020</div>
+              <div class="what">
+                <h3>B.S. in Field • University</h3>
+                <p class="meta">Honors / Minor / Activities (optional)</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-label="Contact">
+        <div class="container contact-box" data-reveal>
+          <h2>Contact</h2>
+          <p class="contact-text">
+            The best way to reach me is email:
+            <a href="mailto:you@example.com">you@example.com</a>. If you are referencing
+            a paper or repo, a link helps.
+          </p>
+          <div class="contact-row">
+            <a class="button" href="mailto:you@example.com">Email</a>
+            <a class="button button-ghost" href="#" target="_blank" rel="noreferrer"
+              >GitHub</a
+            >
+            <a class="button button-ghost" href="#" target="_blank" rel="noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="small">
+          © <span id="year">2026</span> Your Name. Built as a zero-build static site.
+        </p>
+        <p class="small">
+          <a href="#about">Back to top</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
