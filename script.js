@@ -44,54 +44,25 @@
     });
   }
 
-  const figureDialog = document.getElementById("researchenvbench-figure-dialog");
-  if (!figureDialog) return;
+  document.querySelectorAll("[data-publication-toggle]").forEach((button) => {
+    const targetId = button.getAttribute("aria-controls");
+    if (!targetId) return;
+    const details = document.getElementById(targetId);
+    if (!details) return;
 
-  const figureImage = figureDialog.querySelector(".figure-dialog-image");
-  const openButtons = document.querySelectorAll(
-    '[data-figure-open="researchenvbench-figure-dialog"]',
-  );
-  const resetButton = figureDialog.querySelector('[data-figure-zoom="reset"]');
-  const closeButton = figureDialog.querySelector("[data-figure-close]");
-  let scale = 1;
+    const syncState = (expanded) => {
+      button.setAttribute("aria-expanded", String(expanded));
+      button.setAttribute(
+        "aria-label",
+        expanded ? "Collapse publication details" : "Expand publication details",
+      );
+      details.hidden = !expanded;
+    };
 
-  const clampScale = (value) => Math.max(1, Math.min(2.5, value));
-  const applyScale = () => {
-    const percent = Math.round(scale * 100);
-    if (figureImage) figureImage.style.width = `${percent}%`;
-    if (resetButton) resetButton.textContent = `${percent}%`;
-  };
-  const resetScale = () => {
-    scale = 1;
-    applyScale();
-  };
-
-  openButtons.forEach((button) => {
+    syncState(false);
     button.addEventListener("click", () => {
-      resetScale();
-      if (typeof figureDialog.showModal === "function") {
-        figureDialog.showModal();
-      } else if (figureImage?.src) {
-        window.open(figureImage.src, "_blank", "noopener");
-      }
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      syncState(!expanded);
     });
   });
-
-  figureDialog.querySelectorAll("[data-figure-zoom]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const action = button.getAttribute("data-figure-zoom");
-      if (action === "in") scale = clampScale(scale + 0.25);
-      if (action === "out") scale = clampScale(scale - 0.25);
-      if (action === "reset") scale = 1;
-      applyScale();
-    });
-  });
-
-  closeButton?.addEventListener("click", () => figureDialog.close());
-  figureDialog.addEventListener("close", resetScale);
-  figureDialog.addEventListener("click", (event) => {
-    if (event.target === figureDialog) figureDialog.close();
-  });
-
-  resetScale();
 })();
