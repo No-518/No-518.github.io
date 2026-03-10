@@ -44,11 +44,13 @@
     });
   }
 
-  document.querySelectorAll("[data-publication-toggle]").forEach((button) => {
-    const targetId = button.getAttribute("aria-controls");
-    if (!targetId) return;
-    const details = document.getElementById(targetId);
-    if (!details) return;
+  document.querySelectorAll(".publication-item").forEach((item, index) => {
+    const button = item.querySelector("[data-publication-toggle]");
+    const details = item.querySelector(".publication-details");
+    if (!button || !details) return;
+    const targetId = `publication-details-${index + 1}`;
+    details.id = targetId;
+    button.setAttribute("aria-controls", targetId);
     const icon = button.querySelector(".publication-toggle-icon");
 
     const syncState = (expanded) => {
