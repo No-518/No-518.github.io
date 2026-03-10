@@ -191,15 +191,25 @@
             <li class="timeline-item publication-item" data-reveal>
               <div class="when publication-when">
                 <span>2026</span>
-                <button
-                  class="publication-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-label="Expand publication details"
-                  data-publication-toggle
-                >
-                  <span class="publication-toggle-icon" aria-hidden="true">▸</span>
-                </button>
+                <div class="publication-links" aria-label="Publication links">
+                  <a
+                    class="button button-ghost"
+                    href="https://arxiv.org/abs/2603.06739"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Paper</a
+                  >
+                  <a
+                    class="button button-ghost"
+                    href="https://github.com/No-518/ResearchEnvBench"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Code</a
+                  >
+                  <span class="button button-ghost button-disabled" aria-disabled="true">
+                    Project
+                  </span>
+                </div>
               </div>
               <div class="what publication-layout">
                 <div class="publication-copy">
@@ -215,33 +225,6 @@
                     Gong, Xipeng Qiu
                   </p>
                   <p class="meta">arXiv preprint, published March 6, 2026</p>
-
-                  <div class="publication-details" hidden>
-                    <p class="publication-abstract">
-                      ResearchEnvBench introduces a benchmark for environment
-                      synthesis in research code execution, focusing on whether
-                      agents can build runnable environments from repositories,
-                      documentation, and target execution settings. The benchmark
-                      shows that current agents still struggle with dependency
-                      resolution and brittle version coupling.
-                    </p>
-                    <div class="link-row publication-actions">
-                      <a
-                        class="button button-ghost"
-                        href="https://arxiv.org/abs/2603.06739"
-                        target="_blank"
-                        rel="noreferrer"
-                        >Paper</a
-                      >
-                      <a
-                        class="button button-ghost"
-                        href="https://github.com/No-518/ResearchEnvBench"
-                        target="_blank"
-                        rel="noreferrer"
-                        >Code</a
-                      >
-                    </div>
-                  </div>
                 </div>
 
                 <div class="paper-figure paper-figure-thumb">

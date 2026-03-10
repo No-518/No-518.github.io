@@ -43,30 +43,4 @@
       observer.observe(el);
     });
   }
-
-  document.querySelectorAll(".publication-item").forEach((item, index) => {
-    const button = item.querySelector("[data-publication-toggle]");
-    const details = item.querySelector(".publication-details");
-    if (!button || !details) return;
-    const targetId = `publication-details-${index + 1}`;
-    details.id = targetId;
-    button.setAttribute("aria-controls", targetId);
-    const icon = button.querySelector(".publication-toggle-icon");
-
-    const syncState = (expanded) => {
-      button.setAttribute("aria-expanded", String(expanded));
-      button.setAttribute(
-        "aria-label",
-        expanded ? "Collapse publication details" : "Expand publication details",
-      );
-      if (icon) icon.textContent = expanded ? "▾" : "▸";
-      details.hidden = !expanded;
-    };
-
-    syncState(false);
-    button.addEventListener("click", () => {
-      const expanded = button.getAttribute("aria-expanded") === "true";
-      syncState(!expanded);
-    });
-  });
 })();
