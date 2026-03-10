@@ -415,6 +415,12 @@ strong {
   align-items: start;
 }
 
+.publication-when {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
 .publication-head {
   margin-bottom: 2px;
 }
@@ -424,35 +430,28 @@ strong {
 }
 
 .publication-toggle {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border: 0;
   background: transparent;
-  color: inherit;
-  text-align: left;
+  color: rgba(15, 76, 92, 0.92);
   transition: color 180ms var(--ease);
 }
 
 .publication-toggle-icon {
-  flex: 0 0 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 1.4em;
-  color: rgba(15, 76, 92, 0.92);
   font-size: 1rem;
   line-height: 1;
 }
 
 .publication-toggle:hover {
   color: var(--accent);
-}
-
-.publication-toggle-text {
-  flex: 1;
 }
 
 .publication-details {
