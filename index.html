@@ -188,38 +188,69 @@
           </div>
 
           <ol class="timeline" aria-label="Publications list">
-            <li class="timeline-item" data-reveal>
+            <li class="timeline-item publication-item" data-reveal>
               <div class="when">2026</div>
-              <div class="what">
-                <h3>
-                  ResearchEnvBench: Benchmarking Agents on Environment Synthesis
-                  for Research Code Execution
-                </h3>
-                <p>
-                  <strong>Yubang Wang</strong>, Chenxi Zhang, Bowen Chen, Zezheng
-                  Huai, Zihao Dai, Xinchi Chen, Yuxin Wang, Yining Zheng, Jingjing
-                  Gong, Xipeng Qiu
-                </p>
-                <p class="meta">arXiv preprint, published March 6, 2026</p>
-                <p>
-                  ResearchEnvBench introduces a benchmark for environment synthesis
-                  in research code execution, focusing on whether agents can build
-                  runnable environments from repositories, documentation, and target
-                  execution settings. The benchmark shows that current agents still
-                  struggle with dependency resolution and brittle version coupling.
-                </p>
-                <div class="link-row">
-                  <a href="https://arxiv.org/abs/2603.06739">Paper</a>
-                  <a href="https://github.com/No-518/ResearchEnvBench">Code</a>
+              <div class="what publication-layout">
+                <div class="publication-copy">
+                  <h3>
+                    ResearchEnvBench: Benchmarking Agents on Environment Synthesis
+                    for Research Code Execution
+                  </h3>
+                  <p>
+                    <strong>Yubang Wang</strong>, Chenxi Zhang, Bowen Chen, Zezheng
+                    Huai, Zihao Dai, Xinchi Chen, Yuxin Wang, Yining Zheng, Jingjing
+                    Gong, Xipeng Qiu
+                  </p>
+                  <p class="meta">arXiv preprint, published March 6, 2026</p>
+                  <p>
+                    ResearchEnvBench introduces a benchmark for environment
+                    synthesis in research code execution, focusing on whether
+                    agents can build runnable environments from repositories,
+                    documentation, and target execution settings. The benchmark
+                    shows that current agents still struggle with dependency
+                    resolution and brittle version coupling.
+                  </p>
+                  <div class="link-row publication-actions">
+                    <a
+                      class="button button-ghost"
+                      href="https://arxiv.org/abs/2603.06739"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Paper</a
+                    >
+                    <a
+                      class="button button-ghost"
+                      href="https://github.com/No-518/ResearchEnvBench"
+                      target="_blank"
+                      rel="noreferrer"
+                      >Code</a
+                    >
+                    <button
+                      class="button button-ghost"
+                      type="button"
+                      data-figure-open="researchenvbench-figure-dialog"
+                      aria-haspopup="dialog"
+                    >
+                      Zoom Figure
+                    </button>
+                  </div>
                 </div>
-                <figure class="paper-figure">
-                  <img
-                    src="./assets/researchenvbench-figure1.jpg"
-                    alt="Overview of an agentic closed-loop process for resolving research environments."
-                    width="3400"
-                    height="1913"
-                    loading="lazy"
-                  />
+
+                <figure class="paper-figure paper-figure-thumb">
+                  <button
+                    class="paper-figure-trigger"
+                    type="button"
+                    data-figure-open="researchenvbench-figure-dialog"
+                    aria-label="Open Figure 1 in a zoom dialog"
+                  >
+                    <img
+                      src="./assets/researchenvbench-figure1-thumb.jpg"
+                      alt="Overview of an agentic closed-loop process for resolving research environments."
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                    />
+                  </button>
                   <figcaption>
                     Figure 1. ResearchEnvBench frames environment synthesis as an
                     agentic closed-loop process that observes execution signals,
@@ -293,6 +324,51 @@
         </div>
       </section>
     </main>
+
+    <dialog
+      id="researchenvbench-figure-dialog"
+      class="figure-dialog"
+      aria-labelledby="researchenvbench-figure-title"
+    >
+      <div class="figure-dialog-panel">
+        <div class="figure-dialog-head">
+          <div>
+            <p class="figure-dialog-kicker">ResearchEnvBench</p>
+            <h2 id="researchenvbench-figure-title">Figure 1</h2>
+          </div>
+          <div class="figure-dialog-controls" aria-label="Figure zoom controls">
+            <button class="button button-ghost" type="button" data-figure-zoom="out">
+              -
+            </button>
+            <button class="button button-ghost" type="button" data-figure-zoom="reset">
+              100%
+            </button>
+            <button class="button button-ghost" type="button" data-figure-zoom="in">
+              +
+            </button>
+            <button class="button button-ghost" type="button" data-figure-close>
+              Close
+            </button>
+          </div>
+        </div>
+
+        <div class="figure-dialog-stage">
+          <img
+            class="figure-dialog-image"
+            src="./assets/researchenvbench-figure1.jpg"
+            alt="Overview of an agentic closed-loop process for resolving research environments."
+            width="3400"
+            height="1913"
+            loading="lazy"
+          />
+        </div>
+
+        <p class="figure-dialog-caption">
+          Figure 1 shows the agentic closed-loop process for resolving research
+          environments under implicit dependency and compatibility constraints.
+        </p>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="container footer-inner">
