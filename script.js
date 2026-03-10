@@ -49,6 +49,7 @@
     if (!targetId) return;
     const details = document.getElementById(targetId);
     if (!details) return;
+    const icon = button.querySelector(".publication-toggle-icon");
 
     const syncState = (expanded) => {
       button.setAttribute("aria-expanded", String(expanded));
@@ -56,6 +57,7 @@
         "aria-label",
         expanded ? "Collapse publication details" : "Expand publication details",
       );
+      if (icon) icon.textContent = expanded ? "▾" : "▸";
       details.hidden = !expanded;
     };
 
