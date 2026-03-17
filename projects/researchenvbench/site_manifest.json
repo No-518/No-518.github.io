@@ -1,0 +1,10 @@
+{
+  "slug": "researchenvbench",
+  "content_json": "/tmp/researchenvbench-site-work/content-curated.json",
+  "output_dir": "/home/ubuntu/wybcode/personal-homepage/projects/researchenvbench",
+  "html": "/home/ubuntu/wybcode/personal-homepage/projects/researchenvbench/index.html",
+  "css": "/home/ubuntu/wybcode/personal-homepage/projects/researchenvbench/site.css",
+  "assets": [
+    "/home/ubuntu/wybcode/personal-homepage/projects/researchenvbench/assets/image-002.jpg"
+  ]
+}
