@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="ResearchEnvBench evaluates whether an agent can transform a raw research repository into an executable environment under realistic hardware and dependency constraints. Instead of assuming the runtime already works, it measures the whole bootstrap process from dependency closure to single-GPU and multi-GPU execution." />
     <title>ResearchEnvBench | Project Page</title>
+    <link rel="canonical" href="https://no-518.github.io/projects/researchenvbench/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ResearchEnvBench | Project Page" />
     <meta property="og:description" content="ResearchEnvBench evaluates whether an agent can transform a raw research repository into an executable environment under realistic hardware and dependency constraints. Instead of assuming the runtime already works, it measures the whole bootstrap process from dependency closure to single-GPU and multi-GPU execution." />
+    <meta property="og:url" content="https://no-518.github.io/projects/researchenvbench/" />
     <meta property="og:image" content="assets/image-002.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ResearchEnvBench | Project Page" />
@@ -16,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./site.css" />
@@ -29,117 +31,304 @@
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <div>
-          <p class="eyebrow">Independent Project Site</p>
-          <h1 class="page-title">ResearchEnvBench</h1>
-          <p class="tagline">Benchmarking agents on the missing precondition of research automation: environment synthesis for real code execution.</p>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a class="brandmark" href="#content">
+            <span class="brandmark-label">ResearchEnvBench</span>
+            <span class="brandmark-meta">Runtime-first benchmark for research automation</span>
+          </a>
+          <nav class="nav" aria-label="Primary">
+            <a href="#overview">Why This Benchmark Exists</a>
+            <a href="#setup">Benchmark Setup</a>
+            <a href="#verification">Runtime Verification Pyramid</a>
+            <a href="#findings">Main Findings</a>
+            <a href="#impact">Why It Matters</a>
+            <a href="#citation">Citation</a>
+          </nav>
         </div>
-        <nav class="nav">
-          <a href="#overview">Overview</a>
-          <a href="#setup">Benchmark Setup</a>
-          <a href="#verification">Runtime Verification Pyramid</a>
-          <a href="#findings">Main Findings</a>
-          <a href="#impact">Why It Matters</a>
-          <a href="#citation">Citation</a>
-        </nav>
-      </div>
-    </header>
+      </header>
 
-    <main id="content">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="venue">arXiv preprint · March 2026</p>
-            <h2>Benchmarking agents on the missing precondition of research automation: environment synthesis for real code execution.</h2>
-            <p class="abstract">ResearchEnvBench evaluates whether an agent can transform a raw research repository into an executable environment under realistic hardware and dependency constraints. Instead of assuming the runtime already works, it measures the whole bootstrap process from dependency closure to single-GPU and multi-GPU execution.</p>
-            <p class="authors">Yubang Wang, Chenxi Zhang, Bowen Chen, Zezheng Huai, Zihao Dai, Xinchi Chen, Yuxin Wang, Yining Zheng, Jingjing Gong, Xipeng Qiu</p>
-            <div class="cta-row">
-              <a class="button" href="https://arxiv.org/abs/2603.06739" target="_blank" rel="noreferrer">Paper</a>
-              <a class="button button-ghost" href="https://github.com/No-518/ResearchEnvBench" target="_blank" rel="noreferrer">Code</a>
+      <main id="content">
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="hero-kicker">Runtime-first benchmark for research automation</p>
+              <h1>ResearchEnvBench</h1>
+              <p class="hero-tagline">Benchmarking agents on the missing precondition of research automation: environment synthesis for real code execution.</p>
+              <p class="hero-abstract">ResearchEnvBench evaluates whether an agent can transform a raw research repository into an executable environment under realistic hardware and dependency constraints. Instead of assuming the runtime already works, it measures the whole bootstrap process from dependency closure to single-GPU and multi-GPU execution.</p>
+              <p class="hero-authors">Yubang Wang, Chenxi Zhang, Bowen Chen, Zezheng Huai, Zihao Dai, Xinchi Chen, Yuxin Wang, Yining Zheng, Jingjing Gong, Xipeng Qiu</p>
+              <div class="hero-actions">
+                <a class="button" href="https://arxiv.org/abs/2603.06739" target="_blank" rel="noreferrer">Paper</a>
+                <a class="button button-ghost" href="https://github.com/No-518/ResearchEnvBench" target="_blank" rel="noreferrer">Code</a>
+                <a class="button button-ghost" href="../../">Home</a>
+              </div>
+              <aside class="hero-callout">
+                <p>Most agent benchmarks start after the runtime already works. ResearchEnvBench measures the first mile that decides whether research automation is real or only looks plausible.</p>
+              </aside>
+            </div>
+
+            <div class="hero-visual">
+              <figure class="hero-figure">
+                <img src="assets/image-002.jpg" alt="ResearchEnvBench figure" />
+                <figcaption>The agent must observe failures, diagnose hidden dependency constraints, act on the environment, and verify real execution instead of stopping at shallow installation checks.</figcaption>
+              </figure>
             </div>
           </div>
-          <figure class="hero-figure">
-            <img src="assets/image-002.jpg" alt="ResearchEnvBench figure" />
-          </figure>
-        </div>
-      </section>
+        </section>
 
-      <section id="overview" class="content-section">
-        <div class="container section-grid">
-          <div class="section-copy">
-            <h3>Overview</h3>
-            <p>Recent coding-agent and scientific-discovery benchmarks usually begin after the execution environment is already available. In real AI research, that assumption is too strong: aligning Python packages, CUDA stacks, compiled operators, and distributed runtimes is often the first failure point.</p>
-            <p>ResearchEnvBench isolates this missing capability. Given a research repository, its documentation, and a target execution setting, the agent must synthesize an environment that can actually run the repository's entrypoints rather than merely look plausible under shallow checks.</p>
+        <section class="highlights">
+          <div class="container highlight-grid">
+            <article class="highlight-card">
+              <p class="highlight-value">44</p>
+              <p class="highlight-label">post-2024 repositories</p>
+              <p class="highlight-detail">Curated for hardware-sensitive setup complexity, from custom CUDA kernels to distributed training.</p>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-value">C0-C5</p>
+              <p class="highlight-label">verification stack</p>
+              <p class="highlight-detail">Evaluation climbs from static dependency closure to auditable multi-device execution.</p>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-value">37.5%</p>
+              <p class="highlight-label">best multi-GPU success</p>
+              <p class="highlight-detail">Even the strongest agent still struggles to reach true distributed readiness.</p>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-value">0 source edits</p>
+              <p class="highlight-label">repository mutation budget</p>
+              <p class="highlight-detail">Agents may repair the environment, but they are not allowed to patch tracked source files.</p>
+            </article>
           </div>
-          <figure class="section-figure">
-            <img src="assets/image-002.jpg" alt="Overview image" />
-          </figure>
-        </div>
-      </section>
-      <section id="setup" class="content-section">
-        <div class="container section-grid">
-          <div class="section-copy">
-            <h3>Benchmark Setup</h3>
-            <p>The benchmark focuses on modern AI and HPC repositories where environment construction is not a trivial `pip install` problem.</p>
-            <ul class="bullets">
-              <li>44 post-2024 research repositories selected for hardware-sensitive complexity, including custom CUDA kernels and distributed training requirements.</li>
-              <li>A clean Docker sandbox starts with CUDA drivers available but no repository-specific deep learning stack preinstalled.</li>
-              <li>Agents may execute shell commands, inspect files, and add auxiliary setup files, but they are not allowed to modify tracked repository source files.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="verification" class="content-section">
-        <div class="container section-grid">
-          <div class="section-copy">
-            <h3>Runtime Verification Pyramid</h3>
-            <p>ResearchEnvBench scores environments with a staged runtime protocol instead of relying on installation logs or static imports alone.</p>
-            <ul class="bullets">
-              <li>C0: static dependency integrity measured through missing imports.</li>
-              <li>C1: minimal CPU execution of the repository entrypoint.</li>
-              <li>C2-C4: hardware alignment, single-GPU execution, and distributed readiness.</li>
-              <li>C5: capability hallucination, measuring the gap between agent self-reports and hidden runtime probes.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="findings" class="content-section">
-        <div class="container section-grid">
-          <div class="section-copy">
-            <h3>Main Findings</h3>
-            <p>Current state-of-the-art agents still struggle to bridge the gap between apparently valid environments and truly runnable research stacks.</p>
-            <ul class="bullets">
-              <li>All evaluated agents show a steep drop from CUDA visibility to true repository entrypoint execution.</li>
-              <li>The best reported multi-GPU validation success rate is only 37.5%, highlighting how hard distributed readiness remains.</li>
-              <li>Lower missing-import ratios do not guarantee stronger GPU readiness; runtime compatibility is a stricter bottleneck than static closure.</li>
-              <li>Agents frequently overclaim success, making capability hallucination a central reliability issue rather than a side effect.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="impact" class="content-section">
-        <div class="container section-grid">
-          <div class="section-copy">
-            <h3>Why It Matters</h3>
-            <p>ResearchEnvBench turns environment synthesis from an invisible assumption into a first-class benchmark target. It provides a realistic testbed for measuring whether autonomous agents can move from code editing to reproducible scientific execution.</p>
-            <p>This matters for AI research automation because a repository that cannot be bootstrapped cannot be validated, extended, or reproduced at scale.</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="citation" class="content-section citation">
-        <div class="container">
-          <h3>Citation</h3>
-          <pre><code>@article{wang2026researchenvbench,
+        <section id="overview" class="content-section section--default">
+          <div class="container">
+            <div class="section-surface">
+              <div class="section-head">
+                <div>
+                  <p class="section-index">01</p>
+                  <p class="section-kicker">The gap in current evaluation</p>
+                </div>
+                <div class="section-title-wrap">
+                  <h2>Why This Benchmark Exists</h2>
+                  <p class="section-deck">Most coding-agent and scientific-discovery benchmarks begin after environment setup has already succeeded. ResearchEnvBench evaluates the step that blocks real research execution first.</p>
+                </div>
+              </div>
+
+              <div class="section-body has-figure">
+                <div class="section-copy">
+                  <p class="lede">Recent coding-agent and scientific-discovery benchmarks usually begin after the execution environment is already available. In real AI research, that assumption is too strong: aligning Python packages, CUDA stacks, compiled operators, and distributed runtimes is often the first failure point.</p>
+                  <p class="">ResearchEnvBench isolates this missing capability. Given a research repository, its documentation, and a target execution setting, the agent must synthesize an environment that can actually run the repository's entrypoints rather than merely look plausible under shallow checks.</p>
+
+                  <aside class="section-callout">
+                    <p>The benchmark asks a more honest question: can an autonomous agent turn a raw research repo into something that really runs?</p>
+                  </aside>
+
+
+                </div>
+
+                <figure class="section-figure">
+                  <img src="assets/image-002.jpg" alt="Why This Benchmark Exists figure" />
+                  <figcaption>ResearchEnvBench frames environment synthesis as an observe-diagnose-act-verify loop grounded in the repository's implicit compatibility stack.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="setup" class="content-section section--cards">
+          <div class="container">
+            <div class="section-surface">
+              <div class="section-head">
+                <div>
+                  <p class="section-index">02</p>
+                  <p class="section-kicker">What agents are allowed to do</p>
+                </div>
+                <div class="section-title-wrap">
+                  <h2>Benchmark Setup</h2>
+                  <p class="section-deck">This is not a toy install benchmark. The setup is designed around modern AI and HPC repositories where environment construction is a systems problem.</p>
+                </div>
+              </div>
+
+              <div class="section-body">
+                <div class="section-copy">
+                  <p class="lede">The benchmark focuses on modern AI and HPC repositories where environment construction is not a trivial `pip install` problem.</p>
+
+
+                    <div class="card-grid">
+                      <article class="info-card">
+                        <p class="card-label">Scope</p>
+                        <h3>44 recent repositories</h3>
+                        <p>The benchmark selects post-2024 research repos with hardware-sensitive complexity, including custom CUDA kernels and distributed training requirements.</p>
+                      </article>
+                      <article class="info-card">
+                        <p class="card-label">Sandbox</p>
+                        <h3>Clean but realistic starting point</h3>
+                        <p>Each task begins in a Docker environment with CUDA drivers available but without the repository-specific deep learning stack preinstalled.</p>
+                      </article>
+                      <article class="info-card">
+                        <p class="card-label">Constraint</p>
+                        <h3>No tracked source modification</h3>
+                        <p>Agents may execute shell commands, inspect files, and add auxiliary setup files, but they are not allowed to edit tracked repository code.</p>
+                      </article>
+                    </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="verification" class="content-section section--steps">
+          <div class="container">
+            <div class="section-surface">
+              <div class="section-head">
+                <div>
+                  <p class="section-index">03</p>
+                  <p class="section-kicker">How success is measured</p>
+                </div>
+                <div class="section-title-wrap">
+                  <h2>Runtime Verification Pyramid</h2>
+                  <p class="section-deck">ResearchEnvBench scores environments with a staged runtime protocol instead of relying on installation logs or import checks alone.</p>
+                </div>
+              </div>
+
+              <div class="section-body has-figure">
+                <div class="section-copy">
+                  <p class="lede">Static dependency closure is only the floor. The benchmark keeps climbing until the environment proves it can support real execution under hardware constraints.</p>
+
+
+                    <div class="step-grid">
+                      <article class="step-card">
+                        <p class="step-label">C0</p>
+                        <h3>Static dependency integrity</h3>
+                        <p>Measure missing imports and unresolved packages to test whether the environment is even structurally coherent.</p>
+                      </article>
+                      <article class="step-card">
+                        <p class="step-label">C1</p>
+                        <h3>Minimal CPU execution</h3>
+                        <p>Require the repository entrypoint to run in a stripped-down CPU setting instead of trusting setup logs.</p>
+                      </article>
+                      <article class="step-card">
+                        <p class="step-label">C2-C4</p>
+                        <h3>Hardware-aligned execution</h3>
+                        <p>Verify CUDA alignment, single-GPU execution, and distributed readiness as progressively stricter runtime checks.</p>
+                      </article>
+                      <article class="step-card">
+                        <p class="step-label">C5</p>
+                        <h3>Capability hallucination audit</h3>
+                        <p>Compare the agent's self-report against hidden runtime probes to detect overclaimed success.</p>
+                      </article>
+                    </div>
+
+                </div>
+
+                <figure class="section-figure">
+                  <img src="assets/image-017.png" alt="Runtime Verification Pyramid figure" />
+                  <figcaption>The evaluation climbs from importability to CPU execution, GPU alignment, distributed execution, and finally hallucination auditing.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="findings" class="content-section section--takeaways">
+          <div class="container">
+            <div class="section-surface">
+              <div class="section-head">
+                <div>
+                  <p class="section-index">04</p>
+                  <p class="section-kicker">What current agents still miss</p>
+                </div>
+                <div class="section-title-wrap">
+                  <h2>Main Findings</h2>
+                  <p class="section-deck">The benchmark shows a persistent gap between apparently valid environments and truly runnable research stacks.</p>
+                </div>
+              </div>
+
+              <div class="section-body">
+                <div class="section-copy">
+                  <p class="lede">Current state-of-the-art agents still struggle to bridge the gap between environments that look valid and environments that can execute modern research code end to end.</p>
+
+
+                    <div class="takeaway-grid">
+                      <article class="takeaway-card">
+                        <p class="takeaway-value">37.5%</p>
+                        <h3>Best multi-GPU validation rate</h3>
+                        <p>Distributed readiness remains far harder than surface-level setup success.</p>
+                      </article>
+                      <article class="takeaway-card">
+                        <p class="takeaway-value">Steep drop</p>
+                        <h3>From CUDA visibility to actual execution</h3>
+                        <p>Seeing hardware is not the same as running the repository's real entrypoint.</p>
+                      </article>
+                      <article class="takeaway-card">
+                        <p class="takeaway-value">Hallucination</p>
+                        <h3>A first-order reliability issue</h3>
+                        <p>Agents often claim success that hidden probes cannot reproduce.</p>
+                      </article>
+                    </div>
+
+                  <ul class="support-list">
+                    <li>Lower missing-import ratios do not guarantee stronger GPU readiness; runtime compatibility is a stricter bottleneck than static closure.</li>
+                    <li>Capability hallucination is central to evaluation because environment success is easy to overstate when verification is weak.</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="impact" class="content-section section--default">
+          <div class="container">
+            <div class="section-surface">
+              <div class="section-head">
+                <div>
+                  <p class="section-index">05</p>
+                  <p class="section-kicker">Why this changes the benchmark target</p>
+                </div>
+                <div class="section-title-wrap">
+                  <h2>Why It Matters</h2>
+                  <p class="section-deck">ResearchEnvBench turns environment synthesis from an invisible assumption into a first-class evaluation problem for autonomous research agents.</p>
+                </div>
+              </div>
+
+              <div class="section-body">
+                <div class="section-copy">
+                  <p class="lede">ResearchEnvBench provides a realistic testbed for measuring whether autonomous agents can move from code editing to reproducible scientific execution.</p>
+                  <p class="">This matters for AI research automation because a repository that cannot be bootstrapped cannot be validated, extended, or reproduced at scale.</p>
+
+                  <aside class="section-callout">
+                    <p>If the environment cannot be synthesized, the rest of the research workflow is blocked before any science can happen.</p>
+                  </aside>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="citation" class="citation-section">
+          <div class="container">
+            <div class="citation-card">
+              <div class="citation-head">
+                <div>
+                  <p class="section-index">06</p>
+                  <h2>Citation</h2>
+                </div>
+                <p class="citation-note">BibTeX for referencing the paper.</p>
+              </div>
+              <pre><code>@article{wang2026researchenvbench,
   title={ResearchEnvBench: Benchmarking Agents on Environment Synthesis for Research Code Execution},
   author={Wang, Yubang and Zhang, Chenxi and Chen, Bowen and Huai, Zezheng and Dai, Zihao and Chen, Xinchi and Wang, Yuxin and Zheng, Yining and Gong, Jingjing and Qiu, Xipeng},
   journal={arXiv preprint arXiv:2603.06739},
   year={2026}
 }</code></pre>
-        </div>
-      </section>
-    </main>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
