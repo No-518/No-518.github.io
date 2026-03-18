@@ -38,16 +38,18 @@
 
         <nav class="nav" aria-label="Primary">
           <a href="#about">About</a>
+          <a href="#updates">Updates</a>
           <a href="#publications">Publications</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
-          <a href="https://no-518.github.io/no-518-blog/" target="_blank" rel="noreferrer"
-            >Blog</a
-          >
         </nav>
 
         <div class="social" aria-label="Social links">
-          <span class="icon-link" aria-label="Email">
+          <a
+            class="icon-link"
+            href="mailto:wybang518@gmail.com"
+            aria-label="Email Yubang Wang"
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
                 d="M4.5 6.75h15A1.5 1.5 0 0 1 21 8.25v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.25v-9a1.5 1.5 0 0 1 1.5-1.5Z"
@@ -65,7 +67,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </span>
+          </a>
 
           <a
             class="icon-link"
@@ -156,8 +158,8 @@
               loading="eager"
             />
             <p class="avatar-caption">
-              Location: live on earth. I welcome collaboration on embodied AI and
-              agentic systems.
+              Based in China. I welcome collaboration on embodied AI, agentic
+              systems, and research automation.
             </p>
           </div>
 
@@ -176,7 +178,123 @@
               Advised by Prof. <strong>Xipeng Qiu</strong>, my research focuses on
               embodied AI and agents, with an emphasis on agentic embodied AI.
             </p>
+            <p>
+              I am especially interested in building and evaluating agents that
+              can perceive, plan, and act in open-ended environments, including
+              research environments where real code execution is the bottleneck.
+            </p>
+            <div class="cta-row" aria-label="Primary links">
+              <a class="button" href="mailto:wybang518@gmail.com">Email</a>
+              <a
+                class="button button-ghost"
+                href="https://scholar.google.com/citations?user=tqr5_9QAAAAJ&hl=zh-TW"
+                target="_blank"
+                rel="noreferrer"
+                >Google Scholar</a
+              >
+              <a
+                class="button button-ghost"
+                href="https://github.com/No-518"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="button button-ghost"
+                href="mailto:wybang518@gmail.com?subject=CV%20request"
+                >Request CV</a
+              >
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section id="updates" class="section" aria-label="Updates">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Updates</h2>
+            <p class="muted">Recent milestones, releases, and research updates.</p>
+          </div>
+
+          <ol class="timeline updates-list" aria-label="Recent updates">
+            <li class="timeline-item update-item" data-reveal>
+              <div class="when">March 2026</div>
+              <div class="what update-copy">
+                <p>
+                  Released <strong>ResearchEnvBench</strong> on arXiv, a benchmark
+                  for evaluating whether agents can synthesize executable research
+                  environments rather than stopping at shallow setup checks.
+                </p>
+                <div class="update-links" aria-label="ResearchEnvBench links">
+                  <a
+                    class="button button-ghost"
+                    href="https://arxiv.org/abs/2603.06739"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Paper</a
+                  >
+                  <a
+                    class="button button-ghost"
+                    href="https://github.com/No-518/ResearchEnvBench"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Code</a
+                  >
+                  <a class="button button-ghost" href="./projects/researchenvbench/">
+                    Project
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline-item update-item" data-reveal>
+              <div class="when">March 2026</div>
+              <div class="what update-copy">
+                <p>
+                  Launched a dedicated project page for ResearchEnvBench to make
+                  the benchmark setup, runtime verification protocol, and main
+                  findings easier to inspect at a glance.
+                </p>
+                <div class="update-links" aria-label="Project links">
+                  <a class="button button-ghost" href="./projects/researchenvbench/">
+                    Project page
+                  </a>
+                  <a
+                    class="button button-ghost"
+                    href="https://github.com/No-518/ResearchEnvBench"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Repository</a
+                  >
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline-item update-item" data-reveal>
+              <div class="when">2026</div>
+              <div class="what update-copy">
+                <p>
+                  I will join <strong>OpenMOSS Lab</strong> as an incoming Ph.D.
+                  student, jointly hosted by Fudan University and the Shanghai
+                  Innovation Institute.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <details class="updates-archive" data-reveal>
+            <summary>Before 2026</summary>
+            <ol class="timeline updates-list updates-list-archive" aria-label="Earlier updates">
+              <li class="timeline-item update-item">
+                <div class="when">2021</div>
+                <div class="what update-copy">
+                  <p>
+                    Started my B.S. in Computer Science at Wuhan University.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </details>
         </div>
       </section>
 
@@ -273,10 +391,26 @@
         <div class="container contact-box" data-reveal>
           <h2>Contact</h2>
           <p class="contact-text">
-            The best way to reach me is email: wybang518 at gmail dot com.
+            The best way to reach me is by email. I am happy to discuss embodied
+            AI, agentic systems, and research collaboration.
           </p>
           <div class="contact-row">
-            <span class="button">wybang518 at gmail dot com</span>
+            <a class="button" href="mailto:wybang518@gmail.com">
+              wybang518@gmail.com
+            </a>
+            <button
+              class="button button-ghost button-copy"
+              id="copy-email-button"
+              type="button"
+              data-email="wybang518@gmail.com"
+            >
+              Copy email
+            </button>
+            <a
+              class="button button-ghost"
+              href="mailto:wybang518@gmail.com?subject=CV%20request"
+              >Request CV</a
+            >
             <a
               class="button button-ghost"
               href="https://github.com/No-518"
