@@ -110,10 +110,20 @@ strong {
 }
 
 .name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  align-items: baseline;
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.name-cn {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+  font-weight: inherit;
 }
 
 .subtitle {
@@ -214,9 +224,13 @@ strong {
 }
 
 .avatar {
+  display: block;
   width: 100%;
+  aspect-ratio: 2 / 3;
   height: auto;
-  border-radius: 999px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-sm);
   border: 1px solid rgba(15, 76, 92, 0.16);
   background: rgba(255, 255, 255, 0.6);
 }
@@ -486,11 +500,30 @@ strong {
 }
 
 .publication-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 10px;
   margin-bottom: 2px;
 }
 
 .publication-title {
   margin: 0;
+}
+
+.venue-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(138, 75, 50, 0.24);
+  background: rgba(138, 75, 50, 0.10);
+  color: rgba(19, 33, 31, 0.82);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .paper-figure {
