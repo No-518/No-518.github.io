@@ -5,8 +5,8 @@ Clean academic one-page homepage inspired by Jekyll Now-style layouts (header + 
 ## Files
 
 - `index.html`: Content and structure (edit this to customize).
-- `style.css`: Styling (CSS variables, responsive layout, subtle background pattern).
-- `script.js`: Small enhancements (year + staggered reveal on scroll).
+- `style.css`: Styling (CSS variables, responsive layout, plain white background).
+- `script.js`: Small enhancements (year + copy email).
 - `assets/avatar.svg`: Placeholder avatar (replace with your own).
 - `.github/workflows/pages.yml`: Optional GitHub Pages deploy workflow (works for static sites).
 
@@ -20,7 +20,7 @@ Clean academic one-page homepage inspired by Jekyll Now-style layouts (header + 
    - Swap `assets/avatar.svg` for your photo (keep the filename), or update the `<img>` `src`.
 3. Adjust styling in `style.css`:
    - Colors and spacing: `:root { ... }`
-   - Fonts are loaded from Google Fonts in `index.html`
+   - Uses system sans-serif fonts without external font downloads
 
 ## Local Preview
 
@@ -60,5 +60,5 @@ This repo includes `.github/workflows/pages.yml` to deploy a static artifact. It
 ## Notes
 
 - The site is "zero-build": no bundlers, no framework, just static files.
-- Animations respect `prefers-reduced-motion`.
+- The homepage uses a text-first layout inspired by https://ysymyth.github.io/, with no entrance animations.
 
