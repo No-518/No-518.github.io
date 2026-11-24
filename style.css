@@ -53,6 +53,7 @@ strong { font-weight: 600; }
 .writing-copy { min-width: 0; }
 .writing-copy h3 { margin: 0; font-size: 16px; line-height: 1.6; font-weight: 500; overflow-wrap: anywhere; }
 .writing-copy p, .writing-note { margin: 5px 0 0; font-size: 14px; color: var(--muted); }
+.writing-languages { display: flex; gap: 16px; margin-top: 8px; font-size: 14px; }
 .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 170px; gap: 40px; align-items: start; }
 .about-text { grid-column: 1; grid-row: 1; }
 .about-text p { margin: 0 0 14px; }

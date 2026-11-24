@@ -25,6 +25,13 @@
             link: item.querySelector("link")?.textContent?.trim(),
             description: item.querySelector("description")?.textContent?.trim(),
             date: new Date(item.querySelector("pubDate")?.textContent || ""),
+            translations: Array.from(item.getElementsByTagNameNS("http://www.w3.org/2005/Atom", "link"))
+              .filter((link) => link.getAttribute("rel") === "alternate")
+              .map((link) => ({
+                lang: link.getAttribute("hreflang"),
+                href: link.getAttribute("href"),
+              }))
+              .filter((link) => link.href && ["en", "zh-CN"].includes(link.lang)),
           }))
           .filter((post) => post.title && post.link && !Number.isNaN(post.date.getTime()))
           .sort((a, b) => b.date - a.date)
@@ -49,6 +56,20 @@
             const description = document.createElement("p");
             description.textContent = post.description;
             copy.append(description);
+          }
+          if (post.translations.length > 1) {
+            const languages = document.createElement("nav");
+            languages.className = "writing-languages";
+            languages.setAttribute("aria-label", "Article language");
+            for (const translation of post.translations) {
+              const languageLink = document.createElement("a");
+              languageLink.href = new URL(translation.href, response.url).href;
+              languageLink.hreflang = translation.lang;
+              languageLink.lang = translation.lang;
+              languageLink.textContent = translation.lang === "en" ? "English" : "中文";
+              languages.append(languageLink);
+            }
+            copy.append(languages);
           }
           entry.append(date, copy);
           recentPosts.append(entry);
