@@ -62,3 +62,11 @@ This repo includes `.github/workflows/pages.yml` to deploy a static artifact. It
 - The site is "zero-build": no bundlers, no framework, just static files.
 - The homepage uses a text-first layout inspired by https://ysymyth.github.io/, with no entrance animations.
 
+## Visitor map
+
+The homepage footer loads the official MapMyVisitors widget asynchronously. Its public widget ID is shared with the blog's `src/components/VisitorMap.astro`; update both if the provider ID changes. Both maps link to the same combined statistics page.
+
+Counts and approximate IP locations come from the provider, with the date range shown by its widget. Pageviews are not unique people, and past traffic cannot be backfilled. No sample numbers are displayed. A provider image is used when JavaScript is disabled; the statistics and privacy links remain available independently of the script.
+
+Styles are scoped to `.visitor-map`, including responsive map sizing. The existing RSS feed, email control, and page content are unchanged.
+
